@@ -1,43 +1,45 @@
 using UnityEngine;
+using static Pickup;
 
 public class PlayerInventory : MonoBehaviour
 {
     public int score = 0;
 
     private LifeController lifeController;
+    private UIController ui;
+
+    // Conteggi per power-up
+    private int healthCount = 0;
+    private int maxHealthCount = 0;
 
     void Awake()
     {
         lifeController = GetComponent<LifeController>();
+        ui = FindObjectOfType<UIController>();
     }
 
-    public void CollectPickup(Pickup.PickupType type, int value)
+    public void CollectPickup(PickupType type, int value)
     {
         switch (type)
         {
-            case Pickup.PickupType.Gold:
-            case Pickup.PickupType.Silver:
-            case Pickup.PickupType.Bronze:
+            case PickupType.Gold:
+            case PickupType.Silver:
+            case PickupType.Bronze:
                 score += value;
+                ui?.UpdateScore(score);
                 break;
 
-            case Pickup.PickupType.Health:
-                if (lifeController != null)
-                {
-                    lifeController.Heal(value);
-                }
+            case PickupType.Health:
+                healthCount++;
+                lifeController?.Heal(value);
+                ui?.ShowPowerUp(type, healthCount);
                 break;
 
-            case Pickup.PickupType.MaxHealth:
-                if (lifeController != null)
-                {
-                    lifeController.maxHealth += value;
-                    lifeController.currentHealth += value; // opzionale, se vuoi anche curarlo
-                    lifeController.currentHealth = Mathf.Clamp(lifeController.currentHealth, 0, lifeController.maxHealth);
-                }
+            case PickupType.MaxHealth:
+                maxHealthCount++;
+                lifeController?.IncreaseMaxHealth(value); // usa metodo nel LifeController
+                ui?.ShowPowerUp(type, maxHealthCount);
                 break;
         }
-
-        Debug.Log($"Collected {type}, score: {score}, HP: {lifeController?.currentHealth}/{lifeController?.maxHealth}");
     }
 }

@@ -44,4 +44,12 @@ public class LifeController : MonoBehaviour
         SceneTracker.Instance.lastLevel = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene("GameOver");
     }
+
+    public void IncreaseMaxHealth(int amount)
+    {
+        maxHealth += amount;
+        currentHealth += amount;
+        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+        uiController?.UpdateHealth(currentHealth, maxHealth); // se hai il riferimento o lo passi
+    }
 }

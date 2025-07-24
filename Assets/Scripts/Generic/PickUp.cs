@@ -44,8 +44,10 @@ public class Pickup : MonoBehaviour
         PlayerInventory inventory = other.GetComponent<PlayerInventory>();
         if (inventory != null)
         {
+            Debug.Log("Inventario trovato");
             inventory.CollectPickup(pickupType, value);
             Destroy(gameObject);
         }
+        Debug.Log("Inventario non trovato ");
     }
 }
