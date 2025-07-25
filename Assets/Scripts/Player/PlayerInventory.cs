@@ -42,4 +42,8 @@ public class PlayerInventory : MonoBehaviour
                 break;
         }
     }
+    public int GetTotalPoints()
+    {
+        return score;
+    }
 }
