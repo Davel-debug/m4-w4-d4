@@ -25,6 +25,9 @@ public class EndLevel : MonoBehaviour
 
         if (currentPoints >= requiredPoints)
         {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+
             SceneManager.LoadScene(victorySceneName);
         }
         else

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CountdownTimer : MonoBehaviour
 {
@@ -8,11 +9,25 @@ public class CountdownTimer : MonoBehaviour
     private float timeLeft;
     private UIController uiController;
     private LifeController lifeController;
-    private bool isRunning = true;
+    private bool isRunning = false;
 
-    void Start()
+    private void Awake()
     {
+        DontDestroyOnLoad(gameObject);
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // Reset timer e riferimenti ogni volta che cambia scena
         timeLeft = startTime;
+        isRunning = true;
+
         uiController = FindObjectOfType<UIController>();
         lifeController = FindObjectOfType<LifeController>();
     }

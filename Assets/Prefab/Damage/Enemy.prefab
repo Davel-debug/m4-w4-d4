@@ -48,8 +48,8 @@ MonoBehaviour:
   projectilePrefab: {fileID: 5306766363667428615, guid: b0d0aa823ebfc6446a1baeacd6153a72, type: 3}
   firePoint: {fileID: 3275782235207473211}
   fireRate: 1
-  projectileSpeed: 15
-  detectionRange: 35
+  projectileSpeed: 12
+  detectionRange: 30
   playerLayer:
     serializedVersion: 2
     m_Bits: 8

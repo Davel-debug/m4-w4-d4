@@ -5,6 +5,7 @@ public class MusicManager : MonoBehaviour
 {
     public AudioClip menuMusic;
     public AudioClip level1Music;
+    public AudioClip level2Music;
     public AudioClip gameOverMusic;
     public AudioClip victoryMusic;
     public AudioClip sadMusic;
@@ -34,8 +35,11 @@ public class MusicManager : MonoBehaviour
             case "Menù":
                 clipToPlay = menuMusic;
                 break;
-            case "Level1" or "Level2":
+            case "Level1" :
                 clipToPlay = level1Music;
+                break;
+            case "Level2":
+                clipToPlay = level2Music;
                 break;
             case "GameOver":
                 clipToPlay = gameOverMusic;

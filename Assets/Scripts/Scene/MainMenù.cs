@@ -10,6 +10,8 @@ public class MainMenuUI : MonoBehaviour
 
     public void Level2()
     {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         SceneManager.LoadScene("Level2"); 
     }
     public void Restart()
@@ -25,6 +27,11 @@ public class MainMenuUI : MonoBehaviour
     public void ExitGame()
     {
         SceneManager.LoadScene("Esci");
-        //Application.Quit(); se vuoi chiuderlo
+
+    }
+    public void RealExitGame()
+    {
+        
+        Application.Quit(); 
     }
 }

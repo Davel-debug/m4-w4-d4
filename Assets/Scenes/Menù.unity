@@ -885,10 +885,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f0e455365da47742a0e27e51f7fd3c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuMusic: {fileID: 0}
-  level1Music: {fileID: 0}
-  gameOverMusic: {fileID: 0}
-  victoryMusic: {fileID: 0}
+  menuMusic: {fileID: 8300000, guid: 9d225354b057dbd4292423885c6fc45b, type: 3}
+  level1Music: {fileID: 8300000, guid: fcdce9128beabb7468f973012ed35760, type: 3}
+  level2Music: {fileID: 8300000, guid: 8c6fc4ce7c3404441a05f6206a6dc1b7, type: 3}
+  gameOverMusic: {fileID: 8300000, guid: a62f82fadc6f75e48bf62f7deaa428e8, type: 3}
+  victoryMusic: {fileID: 8300000, guid: 9795d1deea58f274eaab758206c0ba3e, type: 3}
   sadMusic: {fileID: 8300000, guid: f2bc0dca0094c514693d341250f366a2, type: 3}
 --- !u!4 &1178750949
 Transform:
@@ -899,7 +900,7 @@ Transform:
   m_GameObject: {fileID: 1178750947}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 476.27493, y: 298.79968, z: -2.5850084}
+  m_LocalPosition: {x: 476.27493, y: 298.79968, z: -860}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

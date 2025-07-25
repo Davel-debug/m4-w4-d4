@@ -42,6 +42,8 @@ public class LifeController : MonoBehaviour
     {
         Debug.Log($"{gameObject.name} is dead.");
         SceneTracker.Instance.lastLevel = SceneManager.GetActiveScene().name;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         SceneManager.LoadScene("GameOver");
     }
 
