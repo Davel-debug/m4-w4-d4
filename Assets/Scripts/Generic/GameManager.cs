@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
 
     public void LoadMainMenu()
     {
+
         SceneManager.LoadScene("MainMenu");
     }
 

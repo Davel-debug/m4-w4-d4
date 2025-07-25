@@ -3,15 +3,26 @@ using UnityEngine.UI;
 
 public class LifeButtonInput : MonoBehaviour
 {
-    public Button damageButton;
-    public Button healButton;
+    private Button damageButton;
+    private Button healButton;
+
+    void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.K)) // ad esempio: K per danneggiare
+        if (damageButton == null)
+            damageButton = GameObject.Find("DamageButton")?.GetComponent<Button>();
+
+        if (healButton == null)
+            healButton = GameObject.Find("HealButton")?.GetComponent<Button>();
+
+        if (damageButton != null && Input.GetKeyDown(KeyCode.K))
             damageButton.onClick.Invoke();
 
-        if (Input.GetKeyDown(KeyCode.H)) // ad esempio: H per curare
+        if (healButton != null && Input.GetKeyDown(KeyCode.H))
             healButton.onClick.Invoke();
     }
 }
