@@ -33,8 +33,7 @@ public class GameManager : MonoBehaviour
 
     public void LoadNextLevel()
     {
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+       
         int nextScene = SceneManager.GetActiveScene().buildIndex + 1;
         if (nextScene < SceneManager.sceneCountInBuildSettings)
             SceneManager.LoadScene(nextScene);

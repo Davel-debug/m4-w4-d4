@@ -172,9 +172,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4363666283137647206, guid: 24e8cdbf2be6be248b7715a679ca68f7, type: 3}
       propertyPath: m_Name
-      value: Main Camera (1)
+      value: 'Main Camera '
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3015994830126341688, guid: 24e8cdbf2be6be248b7715a679ca68f7, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -347,8 +348,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -35, y: -1.4839}
-  m_SizeDelta: {x: 164.8117, y: 99.907}
+  m_AnchoredPosition: {x: -32.2975, y: -0.5831}
+  m_SizeDelta: {x: 165.1117, y: 102.6071}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &582051576
 MonoBehaviour:
@@ -625,7 +626,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0.5
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -712,7 +713,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -297, y: -246}
+  m_AnchoredPosition: {x: -297, y: -224}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1320620335

@@ -202,3 +202,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dcde1e81677e3045b5b7e5b7e33a950, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  requiredPoints: 70
+  victorySceneName: VictoryScreen
+  messagePanel: {fileID: 0}
+  messageText: {fileID: 0}
+  messageDuration: 3
